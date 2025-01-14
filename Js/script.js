@@ -47,4 +47,4 @@ function preventStandby() {
 
 // Chamar a função para prevenir o standby
 preventStandby();
-  
+
