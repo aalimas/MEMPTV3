@@ -1,3 +1,4 @@
+
 function updateDateTime() {
   const dateTimeElement = document.getElementById("date-time");
   const now = new Date();
