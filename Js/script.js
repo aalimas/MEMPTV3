@@ -24,7 +24,7 @@ updateDateTime();
 // Recarregar a página a cada 10 segundos
 setTimeout(() => {
   location.reload();
-}, 1000);
+}, 10000);
 
 // Função para prevenir o modo de espera da TV
 function preventStandby() {
