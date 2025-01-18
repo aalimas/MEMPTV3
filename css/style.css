@@ -1,0 +1,81 @@
+/* Reset padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  overflow: hidden; /* Remove barras de rolagem */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  transition: background-color 0.5s, color 0.5s; /* Suaviza a troca de cores */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px; /* Reduzido o padding para diminuir a altura */
+  height: 8%; /* Altura reduzida */
+}
+
+header .left {
+  font-size: 2em; /* Tamanho da mensagem no cabeçalho */
+  font-weight: bold;
+}
+
+header .right {
+  text-align: right;
+  font-size: 1.5em; /* Tamanho do relógio */
+  font-weight: bold;
+  line-height: 1.5; /* Ajusta espaçamento entre linha da data e hora */
+}
+
+footer {
+  text-align: center;
+  padding: 5px 20px; /* Reduzido o padding para diminuir a altura */
+  border-top: 1px solid #ddd;
+  height: 8%; /* Altura reduzida */
+}
+
+footer marquee {
+  font-size: 1.5em; /* Texto maior no rodapé */
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25%; /* Alterado para 1/4 do espaço */
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.left-content img {
+  width: 100%;
+  height: auto;
+}
+
+.right-content {
+  width: 75%; /* Alterado para 3/4 do espaço */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.right-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
