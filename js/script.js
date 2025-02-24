@@ -9,10 +9,10 @@ function showSlide(index) {
 }
 
 function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
+    currentSlide++;
 
-    if (currentSlide === 0) {
-        location.reload(); // Recarrega a página ao voltar ao primeiro slide
+    if (currentSlide >= slides.length) {
+        location.reload(); // Recarrega a página quando chega ao fim do ciclo
     } else {
         showSlide(currentSlide);
         let intervalTime = currentSlide === 0 ? 120000 : 60000;
@@ -21,11 +21,17 @@ function nextSlide() {
 }
 
 function startSlideShow() {
-    showSlide(currentSlide); 
-    setTimeout(nextSlide, 120000); // 2 minutos no primeiro slide antes de trocar
+    showSlide(currentSlide);
+    setTimeout(nextSlide, 120000); // Primeiro slide dura 2 minutos
 }
 
-startSlideShow();
+// Recarrega a página ao iniciar para garantir imagens atualizadas
+window.onload = function () {
+    location.reload();
+};
+
+// Inicia a apresentação após o reload
+setTimeout(startSlideShow, 500);
 
 function updateClock() {
     const now = new Date();
@@ -43,3 +49,4 @@ function updateSlideIndicator(index) {
 
 updateClock();
 updateSlideIndicator(currentSlide);
+
