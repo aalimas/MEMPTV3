@@ -32,7 +32,7 @@ function startSlideShow() {
     setTimeout(nextSlide, 120000); // Aguarda 2 minutos antes de trocar o primeiro slide
 }
 
-setTimeout(startSlideShow, 500); // Inicia o slideshow com um pequeno atraso
+setTimeout(startSlideShow, 1); // Inicia o slideshow com um pequeno atraso
 
 // Função para atualizar o relógio
 function updateClock() {
@@ -52,3 +52,4 @@ function updateSlideIndicator(index) {
 
 updateClock(); // Atualiza o relógio imediatamente
 updateSlideIndicator(currentSlide); // Atualiza o indicador do slide
+
