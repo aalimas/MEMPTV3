@@ -1,3 +1,4 @@
+
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const slideIndicator = document.getElementById('slide-indicator');
