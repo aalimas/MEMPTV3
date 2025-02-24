@@ -10,16 +10,19 @@ function showSlide(index) {
 
 function nextSlide() {
     currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
+
+    if (currentSlide === 0) {
+        location.reload(); // Recarrega a página ao voltar ao primeiro slide
+    } else {
+        showSlide(currentSlide);
+        let intervalTime = currentSlide === 0 ? 120000 : 60000;
+        setTimeout(nextSlide, intervalTime);
+    }
 }
 
 function startSlideShow() {
-    showSlide(currentSlide); // Exibe o primeiro slide imediatamente
-    setInterval(function() {
-        // Ajusta o tempo de exibição do slide
-        let intervalTime = currentSlide === 0 ? 120000 : 60000; // 2 min para o primeiro, 1 min para os outros
-        setTimeout(nextSlide, intervalTime);
-    }, 60000); // Troca a cada 1 min
+    showSlide(currentSlide); 
+    setTimeout(nextSlide, 120000); // 2 minutos no primeiro slide antes de trocar
 }
 
 startSlideShow();
