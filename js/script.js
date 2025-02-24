@@ -3,11 +3,11 @@ const slides = document.querySelectorAll('.slide');
 const slideIndicator = document.getElementById('slide-indicator');
 
 // Verifica se a página já foi recarregada
-if (!localStorage.getItem('reloaded')) {
-    localStorage.setItem('reloaded', 'true'); // Marca a página como recarregada
+if (!sessionStorage.getItem('hasReloaded')) {
+    sessionStorage.setItem('hasReloaded', 'true'); // Marca a página como recarregada
     setTimeout(() => {
-        location.reload(); // Recarrega a página uma vez após um pequeno atraso
-    }, 100); // Pequeno atraso para garantir que a página tenha tempo de carregar
+        location.reload(); // Recarrega a página após um pequeno tempo
+    }, 100); // Delay de 100ms antes de recarregar
 } else {
     function showSlide(index) {
         slides.forEach(slide => slide.classList.remove('active'));
@@ -53,4 +53,3 @@ if (!localStorage.getItem('reloaded')) {
     updateClock();
     updateSlideIndicator(currentSlide);
 }
-
