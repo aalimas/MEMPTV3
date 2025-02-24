@@ -3,30 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MEMP - Planeamento e Controlo da Produção</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Link para o CSS -->
-    <script src="Js/script.js" defer></script> <!-- Link para o JavaScript -->
+    <title>Apresentação de Slides</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="left">MEMP - Planeamento e Controlo da Produção</div>
-        <div class="right" id="clock"></div>
-    </header>
-    <main>
-        <div class="left-content">
-            <img src="Imagens/Imagem1.jpg" >
-            <img src="Imagens/Imagem2.jpg" >
-            <img src="Imagens/TarefasEquipa.jpg" >
+    <div class="slides-container">
+        <div class="slide active">
+            <img src="Imagens/Ocupa.jpg" alt="Slide 1">
+            <div class="avatar-container">
+                <img src="Imagens/avatar1.JPG" alt="Avatar">
+            </div>
+            <div class="explanation">Slide1 - Ocupação Oficinal</div>
         </div>
-        <div class="right-content">
-            <img src="Imagens/Ocupa.jpg">
+
+        <div class="slide">
+            <div class="multi-image">
+                <img src="Imagens/ProgramaCpPorto.jpg" alt="Imagem 1">
+                <img src="Imagens/ProgramaCpRegional.jpg" alt="Imagem 2">
+                <img src="Imagens/ProgramaCpRegionalUDD9630.jpg" alt="Imagem 3">
+            </div>
+            <div class="avatar-container">
+                <img src="Imagens/avatar2.JPG" alt="Avatar">
+            </div>
+            <div class="explanation">Slide2 - Programas Semanais</div>
         </div>
-    </main>
-    <footer>
-        <marquee behavior="scroll" direction="left">Manutenção e Engenharia - Manutenção Porto - Planeamento e Controlo da Produção</marquee>
-    </footer>
+
+        <div class="slide">
+            <div class="multi-image">
+                <img src="Imagens/ProgramaCpGeral.jpg" alt="Imagem 1">
+                <img src="Imagens/ProgramaCpRegionalRenfe.jpg" alt="Imagem 2">
+                <img src="Imagens/ProgramaCpTf.jpg" alt="Imagem 3">
+            </div>
+            <div class="avatar-container">
+                <img src="Imagens/avatar1.JPG" alt="Avatar">
+            </div>
+            <div class="explanation">Slide3 - Programas Semanais</div>
+        </div>
+
+        <div class="slide">
+            <div class="multi-image">
+                <img src="Imagens/EntradasMPCOntumil.jpg" alt="Imagem 1">
+                <img src="Imagens/EntradasMPSernada.jpg" alt="Imagem 2">
+                <img src="Imagens/Equipa_prevencao.jpg" alt="Imagem 3">
+            </div>
+            <div class="avatar-container">
+                <img src="Imagens/avatar2.JPG" alt="Avatar">
+            </div>
+            <div class="explanation">Slide4 - Programas Semanais</div>
+        </div>
+
+        <div class="slide">
+            <img src="/Imagens/Ocupacao.jpg" alt="Slide 5">
+            <div class="avatar-container">
+                <img src="Imagens/avatar1.JPG" alt="Avatar">
+            </div>
+            <div class="explanation">Slide5 - Ocupação Semanal</div>
+        </div>
+
+        <div class="slide">
+            <img src="/Imagens/Dashboard.jpg" alt="Slide 6">
+            <div class="avatar-container">
+                <img src="Imagens/avatar2.JPG" alt="Avatar">
+            </div>
+            <div class="explanation">Slide6 - Dashboard</div>
+        </div>
+
+        <div class="clock" id="clock"></div>
+        <div class="slide-indicator" id="slide-indicator"></div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
-
-
